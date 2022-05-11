@@ -1,0 +1,27 @@
+{
+  "sourceRoot": "apps/kata-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/kata-e2e/cypress.json",
+        "devServerTarget": "kata:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "kata:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/kata-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["kata"]
+}

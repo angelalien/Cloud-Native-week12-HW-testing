@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "kata": "apps/kata",
+    "kata-e2e": "apps/kata-e2e"
+  }
+}
