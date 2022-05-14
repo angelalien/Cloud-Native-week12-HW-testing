@@ -13,8 +13,15 @@ export class Shopping {
                 }
             }                      
         });  
+        
         for (let i = 0; i < nums.length; i++) {
-            this._price+=100*nums[i]*this.discount[nums[i]-1]
+            if(nums[i]==0){
+                continue;
+            }
+            else{
+                this._price+=100*nums[i]*this.discount[nums[i]-1];
+            }
+            
         } 
         if(nums.length>1 && nums[0]>nums[1] && (nums[0]-nums[1])%2==0){
             let temp_price=0;
