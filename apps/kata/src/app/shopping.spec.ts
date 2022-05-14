@@ -22,4 +22,10 @@ describe('Shopping', () => {
     shopping.buy([1,2,0,0,0]);    
     expect(shopping.price).toBe(290);
   });
+
+  test('buy 4 books(ep1,2)', () => {
+    const shopping = new Shopping();
+    shopping.buy([2,2,0,0,0]);    
+    expect(shopping.price).toBe(380);
+  });
 });
