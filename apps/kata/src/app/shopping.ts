@@ -12,31 +12,30 @@ export class Shopping {
                     nums[i]+=1;
                 }
             }                      
-        });  
-        
+        });
+
         for (let i = 0; i < nums.length; i++) {
             if(nums[i]==0){
                 continue;
             }
             else{
                 this._price+=100*nums[i]*this.discount[nums[i]-1];
-            }
-            
-        } 
+            }            
+        }
+        
         if(nums.length>1){
             for (let i = 1; i < nums.length; i++) {
                 if(nums[i-1]>nums[i] && (nums[i-1]-nums[i])%2==0){
-                    let temp_price=0;
+                    let new_price=0;
                     nums[i-1]-=1;
                     nums[i]+=1;
                     for (let i = 0; i < nums.length; i++) {
-                        temp_price+=100*nums[i]*this.discount[nums[i]-1]
+                        new_price+=100*nums[i]*this.discount[nums[i]-1];
                     }
-                    this._price=Math.min(this._price,temp_price);
+                    this._price=Math.min(this._price,new_price);
                     break;
                 }
-            }
-            
+            }            
         }
     }
 
