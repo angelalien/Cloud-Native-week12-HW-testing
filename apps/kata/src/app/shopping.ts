@@ -23,14 +23,20 @@ export class Shopping {
             }
             
         } 
-        if(nums.length>1 && nums[0]>nums[1] && (nums[0]-nums[1])%2==0){
-            let temp_price=0;
-            nums[0]-=1;
-            nums[1]+=1;
-            for (let i = 0; i < nums.length; i++) {
-                temp_price+=100*nums[i]*this.discount[nums[i]-1]
+        if(nums.length>1){
+            for (let i = 1; i < nums.length; i++) {
+                if(nums[i-1]>nums[i] && (nums[i-1]-nums[i])%2==0){
+                    let temp_price=0;
+                    nums[i-1]-=1;
+                    nums[i]+=1;
+                    for (let i = 0; i < nums.length; i++) {
+                        temp_price+=100*nums[i]*this.discount[nums[i]-1]
+                    }
+                    this._price=Math.min(this._price,temp_price);
+                    break;
+                }
             }
-            this._price=Math.min(this._price,temp_price);
+            
         }
     }
 

@@ -76,5 +76,11 @@ describe('Shopping', () => {
     shopping.buy([2,2,2,1,1]);    
     expect(shopping.price).toBe(640);
   });
+
+  test('buy 23 books(ep1,2,3,4,5)', () => {
+    const shopping = new Shopping();
+    shopping.buy([5,5,4,5,4]);    
+    expect(shopping.price).toBe(1765);
+  });
   
 });
