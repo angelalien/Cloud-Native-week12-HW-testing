@@ -28,4 +28,10 @@ describe('Shopping', () => {
     shopping.buy([2,2,0,0,0]);    
     expect(shopping.price).toBe(380);
   });
+
+  test('buy 8 books(ep1,2,3,4,5)', () => {
+    const shopping = new Shopping();
+    shopping.buy([2,2,2,1,1]);    
+    expect(shopping.price).toBe(640);
+  });
 });
