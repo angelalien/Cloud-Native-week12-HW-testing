@@ -2,7 +2,7 @@
 
 # W12TestingHw
 
-This project was generated using [Nx](https://nx.dev).
+This project was generated using [Nx](https://nx.dev). The testing cases are based on Potter Kata ([English website](https://codingdojo.org/kata/Potter/), [Chinese website](https://ihower.tw/blog/archives/8162)).
 
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
